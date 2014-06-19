@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title> </title>
+		<link rel="stylesheet" href="style.css" />
+		<meta name="description" content="Responsive Animated Border Menus with CSS Transitions" />
+		<meta name="keywords" content="navigation, menu, responsive, border, overlay, css transition" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="C:\Users\Devil\Desktop\javafinal\下標籤\css\normalize.css" />
+		<link rel="stylesheet" type="text/css" href="C:\Users\Devil\Desktop\javafinal\下標籤\css\demo.css" />
+		<link rel="stylesheet" type="text/css" href="C:\Users\Devil\Desktop\javafinal\下標籤\css\icons.css" />
+		<link rel="stylesheet" type="text/css" href="C:\Users\Devil\Desktop\javafinal\下標籤\css\meerkat.css" />
+		<script src="C:\Users\Devil\Desktop\javafinal\下標籤\js\modernizr.custom.js"></script>
+	</head>
+	<body>
+		<ul id="lstImages" class="imagesSource">
+			<li><img alt="BMW" src="images/meerkat_cover_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/meerkat_baby2_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/meerkat_baby1_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/meerkat_eating1_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/meerkat_eating2_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/meerkat_habitat1_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/meerkat_habitat2_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/meerkat_cover2_resized.jpg" /></li>
+		</ul>
+
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="jquery-1.4.1-vsdoc.js"></script>
+		<script type="text/javascript" src="jquery.pageFlipper.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				var isIPad = navigator.userAgent.indexOf('iPad') >= 0;
+
+				$('#lstImages').pageFlipper({
+					fps: isIPad ? 80 : 20,
+					easing: 0.2,
+					backgroundColor: '#d8bfd8'
+				});//調"翻頁"速度
+
+				$('.canvasHolder').css('left', (isIPad ? 0 : 120) + 'px');//調"瀏覽頁面"大小
+				$('#mouse').css({
+					width: (isIPad ? 40 : 20) + 'px',
+					height: (isIPad ? 40 : 20) + 'px',
+					'-moz-border-radius': (isIPad ? 200 : 100) + 'px',
+					'-webkit-border-radius': (isIPad ? 200 : 100) + 'px'
+				});
+			});
+		</script>
+		<div class="container">
+			<header class="codrops-header">
+				
+			</header>
+			<nav id="bt-menu" class="bt-menu">
+				<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+				<ul>
+				<li>	
+				<div style="width: 150px; height: 50px;cursor: pointer; background: url('C:/Users/Devil/Desktop/javafinal/buttonpic/fox2.jpg');">
+				<img style ="width: 150px; height: 50px;"
+					title="" 
+					onclick="window.open('C:/Users/Devil/Desktop/javafinal/four%20animals/fox/fox.html')" 
+					onmouseover="this.style.background ='url(C:/Users/Devil/Desktop/javafinal/buttonpic/fox1.jpg)';"
+					onmouseout="this.style.background ='url(C:/Users/Devil/Desktop/javafinal/buttonpic/fox2.jpg)';"
+					width="150px" 
+					height"50px">;
+						
+				</div>
+			</li>
+			
+			<li>	
+				<div style="width: 150px; height: 50px;cursor: pointer; background: url('C:/Users/Devil/Desktop/javafinal/buttonpic/lynx2.jpg');">
+				<img style ="width: 150px; height: 50px;"
+					title="" 
+					onclick="window.open('C:/Users/Devil/Desktop/javafinal/four%20animals/lynx/lynx.html')" 
+					onmouseover="this.style.background ='url(C:/Users/Devil/Desktop/javafinal/buttonpic/lynx1.jpg )';"
+					onmouseout="this.style.background ='url(C:/Users/Devil/Desktop/javafinal/buttonpic/lynx2.jpg)';"
+					width="150px" 
+					height"50px">
+						
+				</div>
+			</li>
+			<li>	
+				<div style="width: 150px; height: 50px;cursor: pointer; background: url('C:/Users/Devil/Desktop/javafinal/buttonpic/prairiedog2.jpg');">
+				<img style ="width: 150px; height: 50px;"	
+					title="" 
+					onclick="window.open('C:/Users/Devil/Desktop/javafinal/four%20animals/prairie_dog/prairie%20dogs.html')" 
+					onmouseover="this.style.background ='url(C:/Users/Devil/Desktop/javafinal/buttonpic/prairiedog1.jpg)';"
+					onmouseout="this.style.background ='url(C:/Users/Devil/Desktop/javafinal/buttonpic/prairiedog2.jpg)';"
+					width="150px" 
+					height"50px">
+						<br><br><br><br><br><br><br><br><br><br>
+				</div>
+			</li>
+			<li>	
+				<div style="width: 150px; height: 50px;cursor: pointer; background: url('C:/Users/Devil/Desktop/javafinal/buttonpic/home.jpg');">
+				<img style ="width: 150px; height: 50px;"
+					title="" 
+					onclick="window.open('C:/Users/Devil/Desktop/javafinal/finaltest.html')" 
+					onmouseover="this.style.background ='url(C:/Users/Devil/Desktop/javafinal/buttonpic/HOME1.jpg)';"
+					onmouseout="this.style.background ='url(C:/Users/Devil/Desktop/javafinal/buttonpic/home.jpg)';">
+				</div>
+			</li>
+				</ul>
+
+				<ul>
+					<li><a href="http://www.savethemeerkat.com/" class="bt-icon icon-home">home</a></li>
+					<li><a href="https://www.google.com.tw/search?hl=zh-TW&biw=1164&bih=566&site=webhp&tbm=isch&sa=1&q=meerkats&oq=meerkats&gs_l=img.3..0j0i24l9.3858.3858.0.4170.1.1.0.0.0.0.78.78.1.1.0....0...1c.1.45.img..0.1.77.pZrDWwHrqX8" class="bt-icon icon-picture">Google picture</a></li>
+					<li><a href="https://www.facebook.com/savethemeerkat" class="bt-icon icon-facebook">Facebook</a></li>
+					<li><a href="https://github.com/u9923013/3team/blob/master/group3%20report.md" class="bt-icon icon-github">icon-github</a></li>
+				</ul>
+			</nav>
+		</div><!-- /container -->
+	</body>
+	<script src="C:\Users\Devil\Desktop\javafinal\下標籤\js\classie.js"></script>
+	<script src="C:\Users\Devil\Desktop\javafinal\下標籤\js\borderMenu.js"></script>
+</html>

@@ -1,0 +1,4 @@
+﻿prairie dog:‪#‎FFE4E1‬
+fox:‪#‎FFE4B5‬
+lynx:‪#‎C1FFC1‬
+meerkat:‪#‎D8BFD8‬

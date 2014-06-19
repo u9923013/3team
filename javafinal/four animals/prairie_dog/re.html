@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canvas page flipper</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<ul id="lstImages" class="imagesSource">
+			<li><img alt="BMW" src="images/prairie_dog_cover1_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/prairie_dog_baby1_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/prairie_dog_baby2_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/prairie_dog_eating1_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/prairie_dog_eating2_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/prairie_dog_live1_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/prairie_dog_live2_resized.jpg" /></li>
+			<li><img alt="BMW" src="images/prairie_dog_cover2_resized.jpg" /></li>
+		</ul>
+
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="jquery-1.4.1-vsdoc.js"></script>
+		<script type="text/javascript" src="jquery.pageFlipper.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				var isIPad = navigator.userAgent.indexOf('iPad') >= 0;
+
+				$('#lstImages').pageFlipper({
+					fps: isIPad ? 80 : 20,
+					easing: 0.2,
+					backgroundColor: '#ffe4e1'
+				});//調"翻頁"速度
+
+				$('.canvasHolder').css('left', (isIPad ? 0 : 120) + 'px');//調"瀏覽頁面"大小
+				$('#mouse').css({
+					width: (isIPad ? 40 : 20) + 'px',
+					height: (isIPad ? 40 : 20) + 'px',
+					'-moz-border-radius': (isIPad ? 200 : 100) + 'px',
+					'-webkit-border-radius': (isIPad ? 200 : 100) + 'px'
+				});
+			});
+		</script>
+	</body>
+</html>
